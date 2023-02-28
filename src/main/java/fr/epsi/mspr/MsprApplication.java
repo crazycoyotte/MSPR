@@ -10,7 +10,7 @@ public class MsprApplication {
 		SpringApplication.run(MsprApplication.class, args);
 		System.out.println("LE PUSH ??");
 
-		test
+		
 	}
 
 }
