@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Employee extends Human{
+public class Employee {
     
     @Column(nullable = false, length = 255)
     private String login;

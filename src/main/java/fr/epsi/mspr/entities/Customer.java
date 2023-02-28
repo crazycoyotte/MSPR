@@ -1,5 +1,5 @@
 package fr.epsi.mspr.entities;
 
-public class Customer extends Human{
+public class Customer {
     
 }
