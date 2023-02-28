@@ -17,8 +17,7 @@ CREATE TABLE Customer(
 
 CREATE TABLE products(
    idProduct INT,
-   name VARCHAR(50),
-   description VARCHAR(50),
+   name VARCHAR(255),
    price FLOAT,
    brand VARCHAR(50),
    category VARCHAR(50),
