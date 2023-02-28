@@ -1,0 +1,50 @@
+CREATE TABLE employee(
+   idEmployee INT,
+   login VARCHAR(50),
+   password VARCHAR(50),
+   PRIMARY KEY(idEmployee)
+);
+
+CREATE TABLE Customer(
+   idCustomer INT,
+   lastName VARCHAR(50),
+   firstName VARCHAR(50),
+   companyName VARCHAR(50),
+   adress VARCHAR(50),
+   IBAN VARCHAR(50),
+   PRIMARY KEY(idCustomer)
+);
+
+CREATE TABLE products(
+   idProduct INT,
+   name VARCHAR(255),
+   price FLOAT,
+   brand VARCHAR(50),
+   category VARCHAR(50),
+   PRIMARY KEY(idProduct)
+);
+
+CREATE TABLE Orders(
+   idOrder DATE,
+   idCustomer INT,
+   idEmployee INT,
+   orderDate DATE,
+   status DECIMAL(15,2),
+   orderNumber VARCHAR(50),
+   idEmployee_1 INT NOT NULL,
+   idCustomer_1 INT NOT NULL,
+   PRIMARY KEY(idOrder),
+   FOREIGN KEY(idEmployee_1) REFERENCES employee(idEmployee),
+   FOREIGN KEY(idCustomer_1) REFERENCES Customer(idCustomer)
+);
+
+CREATE TABLE ordersProduct(
+   idOrderProduct INT,
+   order_id INT,
+   product_name VARCHAR(50),
+   product_price FLOAT,
+   quantity INT,
+   idOrder DATE NOT NULL,
+   PRIMARY KEY(idOrderProduct),
+   FOREIGN KEY(idOrder) REFERENCES Orders(idOrder)
+);

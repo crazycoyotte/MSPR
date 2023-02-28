@@ -11,11 +11,14 @@ import lombok.Data;
 @Data
 @Entity
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long idProduct;
     
     @Column(unique = true, nullable = false, length = 50)
-    private String name;
+    private String nameProduct;
+
+
 
 }
