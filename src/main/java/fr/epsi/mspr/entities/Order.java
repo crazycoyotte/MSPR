@@ -9,9 +9,9 @@ import lombok.Data;
 public class Order {
 
     @Column(nullable = false, length = 255)
-    private String id_order;
+    private String idOrder;
 
     @Column(nullable = false, length = 255)
-    private String name_order;
+    private String nameOrder;
     
 }

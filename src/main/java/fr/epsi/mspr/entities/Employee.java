@@ -14,7 +14,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id_employee;
+    private long idEmployee;
 
     @Column(nullable = false, length = 255)
     private String login;

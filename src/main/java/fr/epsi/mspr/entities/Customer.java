@@ -7,9 +7,9 @@ import javax.persistence.Column;
 public class Customer {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id_customer;
+    private long idCustomer;
 
     @Column(unique = true, nullable = false, length = 50)
-    private String name_customer;
+    private String nameCustomer;
     
 }
