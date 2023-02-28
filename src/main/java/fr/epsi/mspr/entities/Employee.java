@@ -10,8 +10,14 @@ import lombok.Data;
 public class Employee {
     
     @Column(nullable = false, length = 255)
-    private String login;
+    public String lastName;
     
     @Column(nullable = false, length = 255)
-    private String password;
+    public String fistName;
+    
+	@Column(nullable = false, length = 255)
+	public String login;
+    
+    @Column(nullable = false, length = 255)
+    public String password;
 }
