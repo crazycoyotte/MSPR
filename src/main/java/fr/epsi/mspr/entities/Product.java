@@ -14,10 +14,10 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idProduct;
+    public long idProduct;
     
     @Column(unique = true, nullable = false, length = 50)
-    private String nameProduct;
+    public String nameProduct;
 
 
 

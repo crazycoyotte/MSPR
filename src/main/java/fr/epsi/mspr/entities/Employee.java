@@ -12,9 +12,9 @@ import lombok.Data;
 @Data
 public class Employee {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idEmployee;
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    public long idEmployee;
 
     @Column(nullable = false, length = 255)
     public String lastName;
