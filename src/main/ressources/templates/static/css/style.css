@@ -1,0 +1,35 @@
+/* commentaires CSS */
+
+/* définition d'une règle pour tous les éléments de la page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* définition d'une règle pour les titres h1 */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* définition d'une règle pour les paragraphes */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* définition d'une règle pour les liens */
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+/* définition d'une règle pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+}
