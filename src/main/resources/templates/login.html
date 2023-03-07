@@ -10,14 +10,9 @@
         <h1>ACME CRUD</h1>
         <h2>LOGIN</h2>
         <form th:action="@{/login}" method="get">
-            <div class ="input"> UserName: <input type="text" name="username"/></div>
-            <div class = "input"> Password: <input type="password" name="password"/></div>
-            <button class="button" onclick="redirectToHome()">Sign In</button>
+            <div class ="input">UserName: <input type="text" name="username"/></div>
+            <div class = "input">Password: <input type="password" name="password"/></div>
+            <button class="button"><a href="homeAdmin.html">Sign In</a></button>
         </form>
     </div>
-    <script>
-    function redirectToHome() {
-        window.location.href = "homeAdmin.html";
-    }
-    </script>
 </body>

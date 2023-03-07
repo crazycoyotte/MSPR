@@ -9,11 +9,13 @@
     <div class="container">
         <h1>ACME CRUD</h1>
         <h2>Admin Pannel</h2>
-        <form th:action="@{/login}" method="post">
-            <button class="button">Effectuer une commande</button>
-            <button class="button">Modifier une commande</button>
-            <button class="button">Voir les commandes</button>
-            <button class="button">Voir les produits</button>
+        <form>
+            <button class="button"><a href="command.html">Effectuer une commande</a></button>
+            <button class="button"><a href="modifCommand.html">Modfifier une commande</a></button>
+            <button class="button"><a href="showCommand.html">Voir les commandes</a></button>
+            <button class="button"><a href="addProduct.html">Ajouter un produit</a></button>
+            <button class="button"><a href="listProduct.html">Listes de produit</a></button>
+            <button class="exitbtn"><a href="login.html">Exit</a></button>
         </form>
     </div>
 </body>
