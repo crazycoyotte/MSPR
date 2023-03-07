@@ -1,0 +1,10 @@
+<div th:replace="header.html"></div>
+
+	<h1>Page Produits</h1>
+  	<div th:each="product : ${listProducts}">
+    	<a th:href="@{${product.idProduct} + '/show'}"><span th:text="${product.idProduct}"></span> <span th:text="${product.nameProduct}"></span></a>
+	</div>
+	
+	<a href="#">New -></a>
+	
+<div th:replace="footer.html"></div>
