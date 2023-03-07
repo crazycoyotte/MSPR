@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect</title>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>ACME CRUD</h1>
+        <h2>LOGIN</h2>
+        <form th:action="@{/login}" method="get">
+            <div class ="input"> UserName: <input type="text" name="username"/></div>
+            <div class = "input"> Password: <input type="password" name="password"/></div>
+            <button class="button" onclick="redirectToHome()">Sign In</button>
+        </form>
+    </div>
+    <script>
+    function redirectToHome() {
+        window.location.href = "homeAdmin.html";
+    }
+    </script>
+</body>
