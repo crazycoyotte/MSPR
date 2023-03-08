@@ -25,33 +25,39 @@ public class ProductController {
 		return "products";
 		// commen
 	}
-	
+
 	@GetMapping(CommonConstant.ROUTE_CREATE)
 	public String createProduct(Model model) {
 		model.addAttribute(PRODUCT_MODEL, new Product());
-        model.addAttribute("route", "save");
+		model.addAttribute("route", "save");
 		return "productForm";
 	}
-	
+
 	@PostMapping(CommonConstant.ROUTE_SAVE)
 	public String saveProduct(Model model, @ModelAttribute Product prodSubmit) {
 		manag.addProduct(prodSubmit);
 		return "redirect:/products/";
 	}
-	
+
 	@GetMapping(CommonConstant.ROUTE_SHOW)
 	public String viewProduct(Model model, @PathVariable("id") int id) {
 		Product proot = manag.findProductById(id);
 		model.addAttribute(PRODUCT_MODEL, proot);
 		return "productView";
 	}
-	
+
 	@GetMapping(CommonConstant.ROUTE_EDIT)
 	public String editProduct(Model model, @PathVariable("id") int id) {
 		Product proot = manag.findProductById(id);
 		model.addAttribute(PRODUCT_MODEL, proot);
-        model.addAttribute("route", "/products/save");
+		model.addAttribute("route", "/products/update");
 		return "productForm";
 	}
-	
+
+	@PostMapping(CommonConstant.ROUTE_UPDATE)
+	public String updateProduct(Model model, @ModelAttribute Product prodSubmit) {
+		manag.updateProduct(prodSubmit);
+		return "redirect:/products/";
+	}
+
 }

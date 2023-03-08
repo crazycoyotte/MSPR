@@ -1,0 +1,29 @@
+<div th:replace="header.html"></div>
+
+
+<form method="POST" th:action=${route} th:object="${product}">
+
+  <label>Id</label>
+  <input type="text" th:field="*{idProduct}" />
+  <br />
+  <label>Nom</label>
+  <input type="text" th:field="*{nameProduct}" />
+  <br />
+  <label>Description</label>
+  <input type="text" th:field="*{descriptionProduct}" />
+  <br />
+  <label>Marque</label>
+  <input type="text" th:field="*{brandProduct}" />
+  <br />
+  <label>Categorie</label>
+  <input type="text" th:field="*{categoryProduct}" />
+  <br />
+  <label>Prix</label>
+  <input type="number" th:field="*{priceProduct}" />
+  <br />
+
+  <input type="submit" value="Submit"/>
+</form>
+
+
+<div th:replace="footer.html"></div>
