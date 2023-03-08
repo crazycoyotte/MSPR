@@ -9,4 +9,11 @@ public class Product {
     
     public String nameProduct;
 
+    public String descriptionProduct;
+    
+    public double priceProduct;
+    
+    public String brandProduct;
+    
+    public String categoryProduct;
 }
