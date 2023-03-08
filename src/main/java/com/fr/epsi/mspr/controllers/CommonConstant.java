@@ -7,7 +7,7 @@ public class CommonConstant {
     public static final String ROUTE_CREATE = "/create";
     public static final String ROUTE_EDIT = "/{id}/edit";
     public static final String ROUTE_SAVE = "/save";
-    public static final String ROUTE_DELETE = "/delete";
-    public static final String ROUTE_UPDATE = "/update";
+    public static final String ROUTE_DELETE = "/{id}/delete";
+    public static final String ROUTE_UPDATE = "/{id}/update";
 
 }

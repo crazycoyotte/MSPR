@@ -1,0 +1,11 @@
+<div th:replace="header.html"></div>
+	<h1>ACME CRUD</h1>
+	<h4>ID |</h4><h5>| Client</h5>
+  	<div class="list" th:each="customer : ${listCustomer}">
+    	<a th:href="@{${customer.idCustomer} + '/show'}">
+		<span class="listId" th:text="${customer.idCustomer}"></span> <span class="listCustomer" th:text="${customer.LastName}"></span>
+	</div>
+	
+	<a class="button" href="create">Ajouter un client</a>
+	
+<div th:replace="footer.html"></div>

@@ -23,7 +23,6 @@ public class ProductController {
 	public String showAll(Model model) {
 		model.addAttribute(PRODUCTS_MODEL, manag.selectAll());
 		return "products";
-		// commen
 	}
 
 	@GetMapping(CommonConstant.ROUTE_CREATE)
@@ -60,4 +59,9 @@ public class ProductController {
 		return "redirect:/products/";
 	}
 
+	@GetMapping(CommonConstant.ROUTE_DELETE)
+	public String deleteProduct(Model model, @PathVariable("id") int id) {
+		manag.deleteProduct(id);
+		return "redirect:/products/";
+	}
 }

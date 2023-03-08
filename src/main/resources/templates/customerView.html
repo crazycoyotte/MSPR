@@ -1,0 +1,25 @@
+<div th:replace="header.html"></div>
+
+<h1>ACME CRUD</h1>
+	<h3>ID</h3>
+	<div><span th:text="${customer.idCustomer}"></span></div>
+	<h3>Entreprise</h3>
+	<div><span th:text="${customer.companyName}"></span></div>
+	<h3>Client</h3>
+	<div><span th:text="${customer.firstName}"></span> <span th:text="${customer.lastName}"></span></div>
+	<h3>Adresse</h3>
+	<div><span th:text="${customer.address}"></span></div>
+	<h3>IBAN</h3>
+	<div><span th:text="${customer.iban}"></span></div>
+	
+	
+	<a class="button" th:href="update">Modifier</a>
+	<div>
+	<a class="button" href="delete/">Supprimer</a>
+	</div>
+	<div>
+	<a class="button" href="/customer/">Liste des clients</a>
+	</div>
+		
+	
+<div th:replace="footer.html"></div>

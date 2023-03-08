@@ -1,0 +1,33 @@
+<div th:replace="header.html"></div>
+
+
+<form method="POST" th:action=${route} th:object="${customer}">
+
+  <label class="formElement">Id</label>
+  <input class="formform" type="text" th:field="*{idCustomer}" />
+  <br />
+
+  <label class="formElement">First Name</label>
+  <input class="formform" type="text" th:field="*{firstName}" />
+  <br />
+  
+  <label class="formElement">Last Name</label>
+  <input class="formform" type="text" th:field="*{lastName}" />
+  <br />
+
+  <label class="formElement">Company Name</label>
+  <input class="formform" type="text" th:field="*{companyName}" />
+  <br />
+
+  <label class="formElement">Address</label>
+  <input class="formform" type="text" th:field="*{address}" />
+  <br />
+
+  <label class="formElement">IBAN</label>
+  <input class="formform" type="text" th:field="*{iban}" />
+  <br />
+
+  <input class="button" type="submit" value="Créer"/>
+</form>
+
+<div th:replace="footer.html"></div>
